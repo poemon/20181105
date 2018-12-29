@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src='js/jquery-1.8.3.js'></script>
+	<style>
+	*{
+		padding: 0px;margin: 0px;
+	}
+	body{
+		background-image: repeating-linear-gradient(-45deg,lavender, lavender 2px,#fff 2px,#fff 6px);
+	}
+	.top_main{
+		width: 100%;height:40px;background-color:white;
+	}
+	.part1{
+		font-size: 12px;margin-left: 350px;line-height: 40px;
+	}
+	.part1 a{
+		text-decoration: none;color: silver;
+	}
+	.part1 a:hover{
+		color: #0F7DCE;
+	}
+	.part2{
+		width: 400px;height: 40px;margin-left: 300px;
+	}
+	.form1 input[type='text']{
+		width: 240px;height: 30px;margin-top: 0px;border: none;margin-top: 5px;
+	}
+	.form1 input[type='image']{
+		width: 38px;height: 30px;vertical-align: middle;
+	}
+	.top_main div{
+		float: left;
+	}
+	.part3 a{
+		text-decoration: none;color: silver;line-height: 40px;margin-left: 0px;font-size: 14px;
+	}	
+	.part3 a:hover{
+		color: #0F7DCE;
+	}
+	.part3 span{
+		color: silver;margin-left: 10px;
+	}
+	input::-webkit-input-placeholder{
+		color: silver;
+	}
+	.form1 input[type='button']{
+		background: url('./image/1.png');width: 30px;height: 30px;background-size: 30px 30px;border: none;vertical-align: middle;
+	}
+	.top_middle{
+		width: 100%;height: 100px;background-color: white;position: relative;
+	}
+	.part4{
+		margin-left: 350px;width: 200px;height: 100px;float: left;
+	}
+	.part4 img{
+		margin-top: 20px;
+	}
+	.part5{
+		width: 100px;height: 40px;float: left;line-height: 40px;text-align: center;margin-top: 30px;font-size: 16px;color: #474747;font-weight: bold;cursor: pointer;
+	}
+	.part5:nth-of-type(2){
+		margin-left: 270px;
+	}
+	.banner{
+		width:100%;height:680px;background-color: white;overflow: hidden;
+	}
+	.banner ul{
+		position: relative;
+	}
+	.banner_list1{
+		width:100%;height:680px;
+		background-image: url('image/1.jpg');
+		list-style:none;float: left;margin-left: 0px;position: absolute;/* 轮播图 */
+	}
+	.banner_list2{
+		width:100%;height:680px;
+		background-image: url('image/2.jpg');
+		list-style: none;float: left;margin-left: 1920px;
+	}
+	.point1{
+		width: 15px;height:15px;border-radius: 10px;
+			background-color:#5397B6;position: relative;top: -20px;
+			margin: 0 auto;
+	}
+	.point2{
+		width: 15px;height:15px;border-radius: 10px;
+			background-color:#666;position: relative;top: -35px;left: 30px;
+			margin: 0 auto;
+	}
+	.img1{
+		margin-left:330px;margin-top:30px;
+	}
+	.text1{
+		color: #7D7D7D;font-size: 18px;text-align: center;font-weight: bold;margin-top:50px;
+	}
+	.text2{
+		color: #999999;font-size: 18px;text-align: center;font-weight: bold;margin-top:15px;
+	}
+	.p1{
+		margin: 20px auto;width: 1200px;
+	}
+	.p2{
+		margin: 0px auto;width: 1200px;
+	}
+	.mag{
+		width: 1200px;height: 400px;margin: 50px auto 0px;
+	}
+	.mag1{
+		width: 280px;height: 400px;float: left;background-color: white;cursor: pointer;
+	}	
+	.mag2,.mag3,.mag4{
+		width: 280px;height: 400px;float: left;margin-left: 24px;background-color: white;cursor: pointer;
+	}	
+	.h3a{
+		text-align: center;color: #1e90d9;font-size: 16px;line-height: 40px;
+	}
+	.pa{
+		font-size: 14px;color: #666666;text-align: center;line-height: 25px;
+	}
+	.more{
+		width: 200px;height: 50px;border: 1px solid #4BA4DE;border-radius: 100px;text-align: center;line-height: 50px;margin: 40px auto;
+		font-size: 14px;color: #4BA4DE;
+	}
+	.mp{
+		width: 1863px;height: 450px;background-color: white;position: relative;
+	}
+	.mp_img{
+		margin:40px 330px;
+	}
+	.ico1{
+		width: 600px;height: 82px;margin-left: 330px;margin-top: 30px;
+	}
+	.icoh1{
+		font-size: 16px;margin-left: 100px;margin-top: -83px;
+	}
+	.icoh3{
+		font-size:14px;color: #666;margin-left: 100px;margin-top: 15px;
+	}
+	.ico2,.ico4{
+		width: 600px;height: 82px;margin-top: 30px;margin-left: 20px;
+	}
+	.ico3{
+		width: 600px;height: 82px;margin-left: 330px;margin-top: 30px;
+	}
+	.mp div{
+		float: left;
+	}
+	.footer1{
+		width:1863px;height:211px;background-color: #45494c;text-align: center;border-bottom: solid 1px #5f5e5e;
+	}
+	.footer1 ul li{
+		width: 300px;float: left;list-style: none;margin-top: 40px;
+	}
+	.footer1 ul li img{
+		width: 80px;height: 80px;
+	}
+	.footer1 ul li span{
+		font-size: 14px;color: #999999;
+	}
+	.footer1 ul li p{
+		font-size: 16px;color: white;line-height: 30px;
+	}
+	.footer2{
+		width:1863px;height:211px;background-color: #45494c;
+	}
+	.footer3{
+		width:1863px;height:80px;background-color: #3F4346;
+	}
+	.footer3 div{
+		width: 200px;height: 200px;
+	}
+	.footcd1{
+		width: 200px;height: 150px;margin-left: 300px;padding-top: 45px;float: left;
+	}
+	.footcd1 h1,.footcd2 h1,.footcd3 h1,.footcd4 h1{
+		font-size: 16px;color: #a0a0a0;margin-bottom: 10px;
+	}
+	.footcd2,.footcd3,.footcd4{
+		width: 200px;height: 150px;float: left;padding-top: 45px;margin-left: 150px;
+	}
+	.footcd2 div{
+		font-size: 14px;color: #787878;line-height: 25px;
+	}
+	.footcd4 p{
+		font-size: 14px;color: white;display: block;width: 80px;float: left;text-align: center;
+	}
+	.footer3{
+		text-align: center;font-size: 12px;color: rgb(153, 153, 153);line-height: 30px;
+	}
+	</style>
+</head>
+<body>
+	<div class='top_main'>
+		<div class='part1'><a href="">美国帕默儿童健康用品客服热线：400-900-5280</a></div>
+		<div class='part2'>
+			<form class='form1' action="" method=''>
+				<input type="text" name="sea" placeholder="请输入在搜索内容...">
+				<input type="image" src='image/search_btn.jpg' >
+				<!-- <input type="button" value=''> -->
+				<!-- 用button代替图片按钮 -->
+			</form>
+		</div>
+		<div class='part3'>
+			<a href="">京东商城</a>
+			<span>|</span>
+			<a href="">天猫商城</a>
+			<span>|</span>
+			<a href="">淘宝商城</a>
+			<span>|</span>
+		</div>
+	</div>
+	<div class='top_middle'>
+		<div class='part4'><img src="image/logo.jpg" ></div>
+			<div class='part5'>首页</div>
+			<div class='part5'>帕默品牌</div>
+			<div class='part5'>产品中心</div>
+			<div class='part5'>实体门店</div>
+			<div class='part5'>招商加盟</div>
+			<div class='part5'>最新动态</div>
+			<div class='part5'>联系我们</div>
+	</div>
+	<div class='banner'>
+			<ul>
+				<li class='banner_list1'></li>
+				<li class='banner_list2'></li>
+			</ul>
+	</div>
+	<div class='point1'></div>
+	<div class='point2'></div>
+	<!-- <div class='img1'></div> -->
+	<img src="image/mp_01.jpg" class='img1' alt="">
+	<div class='text1'>让每个儿童拥有健康生活！</div>
+	<div class='text2'>专注健康环保的儿童用品领导品牌！</div>
+	<div class='p1'><img src="image/p1.jpg" alt=""></div>
+	<div class='p2'><img src="image/p2.jpg" alt=""></div>
+	<div class='con'></div>
+	<div class='mag'>
+		<div class='mag1'>
+			<img src="image/t1.jpg" alt="">
+			<h3>1.2m白桦木学习桌</h3><p>颜色：蓝／粉 尺寸：1200*65cm 材质：白桦木（实木） 含L型面板及大抽屉。桌面板0°-80°调节，防火，耐磨防刮，易清</p>
+		</div>
+		<div class='mag2'>
+			<img src="image/t2.jpg" alt="">
+			<h3>1.2m白桦木学习桌</h3><p>颜色：蓝／粉 尺寸：1200*65cm 材质：白桦木（实木） 含L型面板及大抽屉。桌面板0°-80°调节，防火，耐磨防刮，易清洁</p>
+		</div>
+		<div class='mag3'>
+			<img src="image/t3.jpg" alt="">
+			<h3>1.2m白桦木学习桌</h3><p>颜色：蓝／粉 尺寸：1200*65cm 材质：白桦木（实木） 含L型面板及大抽屉。桌面板0°-80°调节，防火，耐磨防刮，易清洁</p>
+		</div>
+		<div class='mag4'>
+			<img src="image/t4.jpg" alt="">
+			<h3>1.2m白桦木学习桌</h3><p>颜色：蓝／粉 尺寸：1200*65cm 材质：白桦木（实木） 含L型面板及大抽屉。桌面板0°-80°调节，防火，耐磨防刮，易清洁</p></div>
+		</div>
+		<div class='more'>更多产品> ></div>
+		<div class='mp'>
+			<img class='mp_img' src="image/mp.jpg" alt="">
+			<div class='ico1'><img src="image/ico_01.jpg" alt="">
+				<h1>源于2007年美国硅谷，十年品质</h1>
+				<h3>美国帕默（Palmer)传承了优良的美国传统，将世界领先的服务和卓越的产品引入到每个专卖店。</h3>
+			</div>
+			<div class='ico2'><img src="image/ico_02.jpg" alt="">
+				<h1>纯实木，无颗粒</h1>
+				<h3>专注安全环保的儿童用品领导品牌：0甲醛，所有材料符合美国SGS及中国CMA和CNAS认证</h3>
+			</div>
+			<div class='ico3'><img src="image/ico_03.jpg" alt="">
+				<h1>专利护心挡板</h1>
+				<h3>有效预防近视，学习时高效集中注意力，养成学习好习惯。</h3>
+			</div>
+			<div class='ico4'><img src="image/ico_04.jpg" alt="">
+				<h1>终生保修，售后无忧</h1>
+				<h3>72小时内上门维修，不收任何零部件费及上门费。</h3>
+			</div>
+
+		</div>
+		<div class='footer1'>
+			<ul>
+				<li style='margin-left:330px'>
+					<img src="image/gywm_01.png" alt="">
+					<p>关于我们</p>
+					<span>About Us</span>
+				</li>
+				<li>
+					<img src="image/cpzx_01.png" alt="">
+					<p>产品中心</p>
+					<span>Product Center</span></li>
+				<li>
+					<img src="image/lxwm_01.png" alt="">
+					<p>联系我们</p>
+					<span>Contact Us</span></li>
+				</li>
+				<li>
+					<img src="image/jmzx_01.png" alt="">
+					<p>加盟中心</p>
+					<span>Join Us</span></li>
+				</li>
+			</ul>
+		</div>
+
+		<div class='footer2'>
+			<div class='footcd1'>
+				<h1>实体门店</h1>
+				<img src="image/glo.jpg" alt="">
+			</div>
+			<div class='footcd2'>
+				<h1>联系方式</h1>
+				<div>400-900-5280</div>
+				<div>Palmer@pam365.com</div>
+				<div>上海市徐汇区宜山路700号</div>
+			</div>
+			<div class='footcd3'>
+				<h1>友情链接</h1>
+			</div>
+			<div class='footcd4'>
+				<h1>关于我们</h1>
+				<img src="image/qr1.jpg" width="80" height="80" alt="">
+				<img src="image/qr2.png" width="80" height="80" style='margin-left: 10px' alt="">
+				<p>微信二维码</p>
+				<p style='margin-left: 15px'>微信二维码</p>
+			</div>
+		</div>
+			
+		<div class="footer3">
+			<span>Copyright © 2018 上海帕顿科技有限公司 All Rights Reserved.</span><br>
+			<span>沪ICP备17055324号</span>
+		</div>
+		<div>&nbsp;	</div>
+		<!-- 原网页底部留白 -->
+</body>
+</html>
+<script>
+	//扒网页 20181129 
+	//完成度 --------------------------------------->> 90%
+
+	go();//轮播图总函数
+	
+	$(".part5").mousemove(function(){
+		$(this).css("background-color","#0F7DCE");
+		$(this).css("color","white");
+	}).mouseout(function(){
+		$(this).css("background-color","white");
+		$(this).css("color","black");
+	});
+	a=1;
+	function go(){
+		//定时器开始 轮播图动画
+		time=setInterval(function(){
+			// $(".banner_list1").css("margin-left","-1920px");初代轮播图
+			if(a==1){
+				$(".banner_list1").animate({"marginLeft":"-1920px"},1000);
+				$(".banner_list2").animate({"marginLeft":"0px"},1000);
+				$(".point1").css("background-color","#666");
+				$(".point2").css("background-color","#5397B6");
+				a=0;
+			}else{
+				$(".banner_list1").animate({"marginLeft":"0px"},1000);
+				$(".banner_list2").animate({"marginLeft":"1920px"},1000);
+				$(".point2").css("background-color","#666");
+				$(".point1").css("background-color","#5397B6");
+				a=1;
+			}
+		},2000);
+	}
+	//轮播图底部小圆圈 鼠标经过事件
+	$(".point1").mousemove(function(){
+		clearInterval(time);
+	}).mouseout(function(){
+		go();
+	});
+	$(".point2").mousemove(function(){
+		clearInterval(time);
+	}).mouseout(function(){
+		go();
+	});
+	// $(".mag1 h3").addClass("h3a");
+	// $(".mag1 p").addClass("pa");
+	for(i=1;i<=4;i++){
+		 strh=".mag"+i+" h3";
+		 strp=".mag"+i+" p";
+		 $(strh).addClass("h3a");
+		 $(strp).addClass("pa");
+
+		$(".mag"+i).mouseover(function(){
+			$(this).css("background-color","#1e90d9");
+			$(this).find("h3").css("color","white");
+		}).mouseout(function(){
+			$(this).css("background-color","white");
+			$(this).find("h3").css("color","#1e90d9");
+		});
+
+		$(".ico"+i).find("h1").addClass("icoh1");
+		$(".ico"+i).find("h3").addClass("icoh3");
+	}
+
+	$(".more").mouseover(function(){
+		$(this).css({"background-color":"#1e90d9","color":"white"});
+	}).mouseout(function(){
+		$(this).css({"background-color":"white","color":"#1e90d9"});
+	});
+
+
+</script>
